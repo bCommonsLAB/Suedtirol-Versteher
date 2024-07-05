@@ -1,4 +1,4 @@
 # config.py
 
-myopenkey = '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'
+myopenkey = 'yourapikey'
 modelname = "gpt-3.5-turbo"
