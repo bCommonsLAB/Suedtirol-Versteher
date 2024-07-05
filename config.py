@@ -1,4 +1,4 @@
-myopenkey = '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'
+myopenkey = 'put your api key here'
 
 prompt = f"""
         Bitte analysiere den folgenden Text und gib mir NUR ein JSON (schreibe nichts anderes als was unten gefragt ist!) zurück mit folgenden Informationen und lasse kein Detail bei den Transkriptionen aus!:
