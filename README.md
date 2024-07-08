@@ -1,7 +1,7 @@
 # Südtirol-Versteher README
 
 
-![image](https://github.com/bCommonsLAB/Suedtirol-Versteher/assets/174307404/e296d804-691f-451d-a0ed-e3bedeea655c)
+![image](https://github.com/bCommonsLAB/Suedtirol-Versteher/assets/174307404/2d2c6f32-be8a-4c65-a101-2cee3130c6a1)
 
 
 
