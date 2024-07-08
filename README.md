@@ -41,6 +41,7 @@ Stelle sicher, dass alle Dateien im selben Verzeichnis liegen. Deine Projektstru
     ├── background.js
     ├── config.py
     ├── index.html
+    ├── loader.css
     ├── recorder.js
     └── styles.css
     
