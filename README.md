@@ -1,7 +1,8 @@
 # Südtirol-Versteher README
 
 
-![image](https://github.com/bCommonsLAB/Suedtirol-Versteher/assets/174307404/2d2c6f32-be8a-4c65-a101-2cee3130c6a1)
+![image](https://github.com/bCommonsLAB/Suedtirol-Versteher/assets/174307404/76dd36fa-14cf-4d23-9689-a1ad3daf3c63)
+
 
 
 
@@ -42,6 +43,7 @@ Stelle sicher, dass alle Dateien im selben Verzeichnis liegen. Deine Projektstru
     ├── index.html
     ├── recorder.js
     └── styles.css
+    
 ```
 
 ## Konfigurationsdatei `config.py`
