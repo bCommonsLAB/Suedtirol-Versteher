@@ -1,5 +1,10 @@
 # Südtirol-Versteher README
 
+
+![image](https://github.com/bCommonsLAB/Suedtirol-Versteher/assets/174307404/463eae3e-02a1-4871-9fdc-34dfb918998d)
+
+
+
 ## Einführung
 
 Willkommen zu deinem Südtirol-Versteher-Projekt! Diese Anwendung ist ein German/Italian Speech-to-Text Bot mit Übersetzungs- und Zusammenfassungsfunktion. Diese Anleitung erklärt dir Schritt für Schritt, wie du deinen Python-Server startest und sicherstellst, dass alle Dateien im selben Verzeichnis liegen.
