@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData();
         formData.append('audio', file);
 
-        fetch('https://humanji.org/api/transcribe', {
+        fetch('   "YOUR-PYTHON-TRANSKRIBE-SERVER-ADRESS"   ', {
             method: 'POST',
             body: formData
         })
