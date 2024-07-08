@@ -85,6 +85,7 @@ header {
   padding: 20px;
   margin-top: 100px;
   text-align: left;
+  max-height: 70%;
 }
 
 .form-container {
