@@ -2,10 +2,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const statusElement = document.getElementById('status');
     const toggleBtn = document.getElementById('micButton');
+    const centerSprachanalyse = document.getElementById('center-sprachanalyse');
     const loadingScreen = document.getElementById('loading-screen');
     let mediaRecorder;
     let isRecording = false;
     let audioChunks = [];
+
+    centerSprachanalyse.style.display = 'none';
+
+    function showCenter() {
+        centerSprachanalyse.style.display = 'flex';
+    }
 
     function showLoading() {
         loadingScreen.style.display = 'flex';
@@ -92,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 statusElement.innerText = 'Aufnahme beendet';
             }
+            showCenter();
         })
         .catch(error => {
             hideLoading();
@@ -132,10 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const files = event.dataTransfer.files;
         handleFiles(files);
         showLoading();
+        showCenter();
     });
 
     document.getElementById('fileElem').addEventListener('change', (event) => {
         handleFiles(event.target.files);
         showLoading();
+        showCenter();
     });
 });
