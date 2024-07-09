@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="dropdown.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -36,6 +37,7 @@
                 <p><i class="fa-solid fa-file"></i><br> Datei hochladen <br> Carica file <input type="file" id="fileElem" accept="audio/wav, audio/m4a" onchange="handleFiles(this.files)"></p>
             </div>
         </div>
+
         <div id="uploaded-audio" style="display: none; margin-top: 20px;">
             <audio id="audio-player" controls></audio>
         </div>
@@ -43,19 +45,86 @@
         <p id="status" class="status"></p>
         <div class="result-grid">
             <div>
-                <h2>Transkription</h2>
+                <div class="resulttop">
+                    <h2>Transkription</h2>
+                    <details class="dropdown">
+                        <summary role="button">
+                            <a class="button">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </a>
+                        </summary>
+                        <ul>
+                            <li><a href="#" onclick="speechText('german-transcription')"><i class="fa-solid fa-volume-high"></i></a></li>
+                            <li><a href="#" onclick="copyText('german-transcription')"><i class="fa-solid fa-copy"></i></a></li>
+                            <li><a href="#" onclick="shareText('german-transcription')"><i class="fa-solid fa-envelope"></i></a></li>
+                        </ul>
+                    </details>
+                </div>
                 <p id="german-transcription" class="result"></p>
             </div>
+
             <div>
-                <h2>Trascrizione</h2>
+                <div class="resulttop">
+                    <h2>Trascrizione</h2>
+                    <details class="dropdown">
+                        <summary role="button">
+                            <a class="button">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </a>
+                        </summary>
+                        <ul>
+                            <li><a href="#" onclick="speechText('italian-transcription')"><i class="fa-solid fa-volume-high"></i></a></li>
+                            <li><a href="#" onclick="copyText('italian-transcription')"><i class="fa-solid fa-copy"></i></a></li>
+                            <li><a href="#" onclick="shareText('italian-transcription')"><i class="fa-solid fa-envelope"></i></i></a></li>
+                        </ul>
+                    </details>
+                </div>
                 <p id="italian-transcription" class="result"></p>
             </div>
+
             <div>
-                <h2>Zusammenfassung</h2>
+                <div class="resulttop">
+                    <h2>Zusammenfassung</h2>
+                    <details class="dropdown">
+                        <summary role="button">
+                            <a class="button">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </a>
+                        </summary>
+                        <ul>
+                            <li><a href="#" onclick="speechText('german-summary')"><i class="fa-solid fa-volume-high"></i></a></li>
+                            <li><a href="#" onclick="copyText('german-summary')"><i class="fa-solid fa-copy"></i></a></li>
+                            <li><a href="#" onclick="shareText('german-summary')"><i class="fa-solid fa-envelope"></i></a></li>
+                        </ul>
+                    </details>
+                </div>
                 <p id="german-summary" class="result"></p>
             </div>
+
             <div>
-                <h2>Riassunto</h2>
+                <div class="resulttop">
+                    <h2>Riassunto</h2>
+                    <details class="dropdown">
+                        <summary role="button">
+                            <a class="button">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </a>
+                        </summary>
+                        <ul>
+                            <li><a href="#" onclick="speechText('italian-summary')"><i class="fa-solid fa-volume-high"></i></i></a></li>
+                            <li><a href="#" onclick="copyText('italian-summary')"><i class="fa-solid fa-copy"></i></a></li>
+                            <li><a href="#" onclick="shareText('italian-summary')"><i class="fa-solid fa-envelope"></i></a></li>
+                        </ul>
+                    </details>
+                </div>
                 <p id="italian-summary" class="result"></p>
             </div>
         </div>
@@ -95,11 +164,14 @@
         <div class="inner one"></div>
         <div class="inner two"></div>
         <div class="inner three"></div>
-      </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="background.js"></script>
 <script src="recorder.js"></script>
+<script src="sharetext.js"></script>
+<script src="copytext.js"></script>
+<script src="speechtotext.js"></script>
 </body>
 </html>

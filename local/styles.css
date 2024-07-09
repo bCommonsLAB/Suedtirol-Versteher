@@ -110,14 +110,17 @@ p {
   margin-top: 20px;
   width: 100%;
 }
-
+.resulttop{
+  display: flex;
+  justify-content: space-between;
+}
 .result {
   background-color: rgba(255, 255, 255, 0.685);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   border: 1px solid rgb(240, 240, 240);
   border-radius: 5px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 22px;
   text-align: left;
   color: rgb(0, 0, 0);
   max-height: 200px;
@@ -125,8 +128,10 @@ p {
 }
 
 .result-grid h2 {
+  width: fit-content;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
+  text-align: center;
 }
 
 #drop-area {

@@ -1,5 +1,5 @@
-myopenkey = ''
-modelname = "your-openai-key"
+myopenkey = 'your-api-key'
+modelname = "gpt-3.5-turbo"
 
 jsonbuild = """
 Bitte analysiere den folgenden Text und gib mir NUR ein JSON (schreibe nichts anderes als was unten gefragt ist!) zurück mit folgenden Informationen und lasse kein Detail bei den Transkriptionen aus!:

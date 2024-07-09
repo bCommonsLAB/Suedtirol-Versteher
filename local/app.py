@@ -1,9 +1,18 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import os
+import config
+from pathlib import Path
 import openai
 import json
-import config
+from gtts import gTTS
+import threading
+import time
+from langdetect import detect, DetectorFactory
+
+# Ensure reproducibility in language detection
+DetectorFactory.seed = 0
+
 
 app = Flask(__name__)
 CORS(app)
@@ -59,6 +68,62 @@ def transcribe():
         # Delete the audio file regardless of the outcome
         if os.path.exists(audio_file_path):
             os.remove(audio_file_path)
+
+
+
+
+def delayed_delete(file_path, delay=5):
+    """Delete the specified file after a delay."""
+    def delete_file():
+        time.sleep(delay)
+        try:
+            if os.path.exists(file_path):
+                os.remove(file_path)
+        except Exception as e:
+            app.logger.error(f"Error deleting file {file_path}: {e}")
+
+    thread = threading.Thread(target=delete_file)
+    thread.start()
+
+
+
+
+
+
+@app.route('/tts', methods=['POST', 'OPTIONS'])
+def tts():
+    if request.method == 'OPTIONS':
+        return '', 200  # Respond to CORS preflight request
+
+    data = request.get_json()
+    text = data.get('text')
+    section = data.get('section')
+    if not text:
+        return jsonify({'error': 'No text provided'}), 400
+
+    try:
+        # Determine the language based on the section
+        if section in ['german-transcription', 'german-summary']:
+            language = 'de'
+        elif section in ['italian-transcription', 'italian-summary']:
+            language = 'it'
+        else:
+            language = detect(text)  # General detection for other sections
+
+        speech_file_path = Path(__file__).parent / "speech.mp3"
+        tts = gTTS(text, lang=language)
+        tts.save(speech_file_path)
+
+        response = send_file(speech_file_path, as_attachment=True)
+        
+        # Schedule the file for deletion after a delay
+        delayed_delete(speech_file_path)
+
+        return response
+
+    except Exception as e:
+        app.logger.error(f'Error during TTS processing: {e}')
+        return jsonify({'error': 'Error during TTS processing'}), 500
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
