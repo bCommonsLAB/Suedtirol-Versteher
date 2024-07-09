@@ -1,4 +1,4 @@
-myopenkey = 'your-api-key'
+myopenkey = 'your-openai-key'
 modelname = "gpt-3.5-turbo"
 
 jsonbuild = """
