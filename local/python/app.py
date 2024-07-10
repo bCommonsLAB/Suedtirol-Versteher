@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import os
-import config
+import json
 from pathlib import Path
 import openai
-import json
 from gtts import gTTS
 import threading
 import time
@@ -13,11 +12,15 @@ from langdetect import detect, DetectorFactory
 # Ensure reproducibility in language detection
 DetectorFactory.seed = 0
 
+# Load configuration from config.json
+config_path = Path(__file__).parent / "config.json"
+with open(config_path, 'r') as config_file:
+    config = json.load(config_file)
 
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = config.myopenkey
+openai.api_key = config['myopenkey']
 
 @app.route('/transcribe', methods=['POST'])
 def transcribe():
@@ -40,11 +43,11 @@ def transcribe():
         language = response.get('language', 'de')  # Default to 'de' if language is not provided
 
         # Construct the prompt
-        prompt = config.jsonbuild + transcript
+        prompt = config['jsonbuild'] + transcript
 
         # Send prompt to OpenAI's GPT-3.5-turbo
         completion_response = openai.ChatCompletion.create(
-            model=config.modelname,
+            model=config['modelname'],
             messages=[
                 {"role": "system", "content": "Du bist ein hilfsbereiter Assistent."},
                 {"role": "user", "content": prompt}
@@ -69,9 +72,6 @@ def transcribe():
         if os.path.exists(audio_file_path):
             os.remove(audio_file_path)
 
-
-
-
 def delayed_delete(file_path, delay=5):
     """Delete the specified file after a delay."""
     def delete_file():
@@ -84,11 +84,6 @@ def delayed_delete(file_path, delay=5):
 
     thread = threading.Thread(target=delete_file)
     thread.start()
-
-
-
-
-
 
 @app.route('/tts', methods=['POST', 'OPTIONS'])
 def tts():
