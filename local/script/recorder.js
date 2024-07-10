@@ -2,16 +2,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const statusElement = document.getElementById('status');
     const toggleBtn = document.getElementById('micButton');
-    const centerSprachanalyse = document.getElementById('center-sprachanalyse');
+    const centerSprachanalyse = document.getElementById('center');
+    const sprachanalyse = document.getElementById('sprachanalyse');
     const loadingScreen = document.getElementById('loading-screen');
     let mediaRecorder;
     let isRecording = false;
     let audioChunks = [];
 
     centerSprachanalyse.style.display = 'none';
-
+    sprachanalyse.style.display = 'none';
     function showCenter() {
         centerSprachanalyse.style.display = 'flex';
+        sprachanalyse.style.display = 'flex';
     }
 
     function showLoading() {
@@ -120,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const circle = document.getElementById(circleId);
         const percent = document.getElementById(percentId);
         circle.style.setProperty('--p', value);
-        percent.innerText = value;
+        percent.innerText = value + "%";
     }
 
     const dropArea = document.getElementById('drop-area');

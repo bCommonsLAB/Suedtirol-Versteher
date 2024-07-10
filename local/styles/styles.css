@@ -43,6 +43,8 @@ body,
 }
 .column {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .eingabe {
   display: flex;
@@ -308,6 +310,14 @@ h2 {
   border-right: 10px solid white;
 }
 
+#sprachanalyse{
+  width: 100%;
+  text-align:center;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
 @property --p {
   syntax: '<number>';
   inherits: true;
@@ -319,7 +329,7 @@ h2 {
 .pie {
   color: white;
   --p: 10;
-  --b: 11px;
+  --b: 8px;
   --c: darkred;
   --w: 75px;
   --secondary-color: lightgray;
@@ -333,7 +343,6 @@ h2 {
   font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
-  z-index: 10;
 }
 .pie:before,
 .pie:after {
@@ -348,6 +357,7 @@ h2 {
     conic-gradient(var(--c) calc(var(--p) * 1%), var(--secondary-color) 0);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
   mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  
 }
 .pie:after {
   inset: calc(50% - var(--b) / 2);
@@ -368,7 +378,6 @@ h2 {
     --p: 0;
   }
 }
-
 
 .tooltip-text {
   visibility: hidden;
