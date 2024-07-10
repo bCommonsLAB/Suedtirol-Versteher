@@ -74,3 +74,5 @@ Dein Server sollte nun laufen und unter `http://localhost:5000` erreichbar sein.
 Wenn du Fragen oder Probleme hast, zögere nicht, uns zu kontaktieren.
 
 Viel Erfolg und Spaß mit deinem Südtirol-Versteher-Projekt!
+
+Cool!
