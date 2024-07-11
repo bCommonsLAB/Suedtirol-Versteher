@@ -47,7 +47,10 @@
                 <audio id="audio-player" controls></audio>
             </div>
             <div id="drop-area">
-                <p><i class="fa-solid fa-file"></i><input type="file" id="fileElem" accept="audio/wav, audio/m4a" onchange="handleFiles(this.files)"></p>
+                <p><input type="file" id="fileElem" accept="audio/wav, audio/m4a" onchange="handleFiles(this.files)"></p>
+                <div class='upload-arrow'>
+                    <div class="upload-base"></div>
+                </div>
             </div>
         </div>
 
