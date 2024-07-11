@@ -38,8 +38,15 @@ body,
   height: 100%;
 }
 .einführung{
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: small;
+  margin-right:30px;
+}
+.text{
+  width:20%;
+  background-color: #5f3a8f;
 }
 .column {
   display: flex;
@@ -75,6 +82,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  height: 55px;
 }
 #audioplayer {
   background-color: #000;
