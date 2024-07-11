@@ -1,5 +1,5 @@
 {
-  "myopenkey": "your-API-key",
+ "myopenkey": "your-API-key",
   "modelname": "gpt-3.5-turbo",
   "jsonbuild": "Bitte analysiere den folgenden Text und gib mir NUR ein JSON (schreibe nichts anderes als was unten gefragt ist!) zurück mit folgenden Informationen und lasse kein Detail bei den Transkriptionen aus!:\n- \"Transcript_D\": Die Transkription auf Deutsch bzw. falls text=italienisch deutsche Übersetzung.\n- \"Transcript_I\": Die Transkription auf Italienisch bzw. falls text=deutsch Übersetzung auf Italienisch.\n- \"Eindruck_D\": Der Eindruck, den der Text auf Deutsch hinterlässt.\n- \"Eindruck_I\": L'impressione lasciata dal testo in italiano.\n- \"Höflichkeit\": Eine Zahl zwischen 0% und 100%, wobei 100% sehr höflich und 0% sehr frech ist.\n- \"Sympathisch\": Eine Zahl zwischen 0% und 100%, wobei 100% sehr sympathisch und 0% sehr unsympathisch ist.\n- \"Lobend\": Eine Zahl zwischen 0% und 100%, wobei 100% überhaupt nicht beleidigend und 0% sehr beleidigend ist.\n- \"Wortwahl\": Eine Zahl zwischen 0% und 100%, wobei 100% eine sehr gute Wortwahl hat und 0% eine sehr schlechte Wortwahl hat.\nHier ist der transkribierte Text: \n"
 }

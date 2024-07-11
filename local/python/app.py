@@ -9,8 +9,7 @@ import threading
 import time
 from langdetect import detect, DetectorFactory
 
-# Ensure reproducibility in language detection
-DetectorFactory.seed = 0
+
 
 # Load configuration from config.json
 config_path = Path(__file__).parent / "config.json"

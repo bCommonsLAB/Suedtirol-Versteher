@@ -16,11 +16,11 @@
 
 <header><div class="seitentitel"><p>Suedtirol Versteher</p><p>|</p><p>Capitore Suedtirolesini</p></div>
     <div class="einführung">
-        <div class="einführungstext" > 
+        <div class="einfuehrungstext" > 
         Ich bin dein Südtirol Versteher und du kannst mir etwas diktieren Ich versuche es auf Deutsch und Italienisch zu transkribieren. Deine Daten werden nicht gepeichert, 
         müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, sieht du unten in der Bewertung. Viel Spass!
         </div>
-        <div class="einführungstext" >
+        <div class="einfuehrungstext" >
         Sono il tuo Capitore Suedtirolesini e puoi dettarmi qualcosa Cercherò di trascriverlo in tedesco e in italiano. I tuoi dati non verranno memorizzati, ma devono essere 
         inviati a OpenAI per l'elaborazione. Formula il tuo testo in modo educato e simpatico - vedrai se ha funzionato nella valutazione sottostante. Divertiti!
         </div>
@@ -43,11 +43,14 @@
                     </label>
                 </div>
             </div>
-            <div id="uploaded-audio" style="display: none; margin-top: 20px;">
+            <div id="uploaded-audio" style="display: none; margin-top: 50px;">
                 <audio id="audio-player" controls></audio>
             </div>
             <div id="drop-area">
-                <p><i class="fa-solid fa-file"></i><input type="file" id="fileElem" accept="audio/wav, audio/m4a" onchange="handleFiles(this.files)"></p>
+                <p><input type="file" id="fileElem" accept="audio/wav, audio/m4a" onchange="handleFiles(this.files)"></p>
+                <div class='upload-arrow'>
+                    <div class="upload-base"></div>
+                </div>
             </div>
         </div>
 
