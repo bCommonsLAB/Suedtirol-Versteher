@@ -226,24 +226,6 @@
       $(document).ready(function(){
           setCanvasHeight();
           createItem();
-          const details = document.getElementById('hover-details');
-          const details2 = document.getElementById('hover');
-
-        details.addEventListener('mouseover', () => {
-            details.setAttribute('open', '');
-        });
-
-        details.addEventListener('mouseout', () => {
-            details.removeAttribute('open');
-        }); 
-
-        details2.addEventListener('mouseover', () => {
-            details2.setAttribute('open', '');
-        });
-
-        details2.addEventListener('mouseout', () => {
-            details2.removeAttribute('open');
-        });     
       });
       $(window).resize(function(){
           setCanvasHeight();
