@@ -255,25 +255,14 @@ h2 {
   position: relative;
 }
 
+.mic-button:hover {
+  border:2px solid purple;
+}
+
 .button-message, .mic {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-}
-
-.button-message {
-  position: absolute;
-  width: 50px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  line-height: 20px;
-  z-index: 2;
-  transform: rotateY(0deg);
-  pointer-events: none;
-  left: 23px;
-  top: 20px;
 }
 
 .mic-button-loader {
@@ -290,23 +279,24 @@ h2 {
   border-top: 3px solid #0084ff; /* Green color for the loader */
   border-radius: 100%;
   animation: borderLoader 1.3s 0.2s ease-in-out infinite; 
+  background: purple;
 }
 
-.mic {
-  position: relative;
-  top: -11px;
-  border: 10px solid white;
+.mic, .mic2{
+  position: absolute;
+  top: 18px;
   height: 20px;
   width: 0;
+  border: 10px solid white;
   border-radius: 10px;
   transform: rotateY(180deg);
 }
 
-.mic:after, .mic:before, .mic-base {
+.mic2:after, .mic2:before, .mic-base2, .mic:after, .mic:before, .mic-base {
   position: absolute;
 }
 
-.mic:after {
+.mic:after, .mic2::after {
   content: "";
   top: 7px;
   left: -17px;
@@ -317,10 +307,9 @@ h2 {
   border-bottom-left-radius: 110px;
   border-bottom-right-radius: 110px;
   border-top: 0;
-
 }
 
-.mic:before {
+.mic:before, .mic2:before {
   content: "";
   top: 33px;
   left: -2px;
@@ -329,7 +318,7 @@ h2 {
   border-right: 2px solid white;
 }
 
-.mic-base {
+.mic-base, .mic-base2 {
   top: 46px;
   left: -10px;
   border-bottom: 5px solid white;
