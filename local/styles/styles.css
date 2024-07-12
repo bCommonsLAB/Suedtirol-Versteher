@@ -43,6 +43,19 @@ body,
   justify-content: space-evenly;
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  .column {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .column > div {
+    width: 100%; /* Make each div take full width */
+    max-width: 400px; /* Optional: Set a max-width for better appearance */
+  }
+}
+
 .eingabe {
   display: flex;
   justify-content: space-evenly;
@@ -202,6 +215,7 @@ h2 {
 .content {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .mic-checkbox {
@@ -318,6 +332,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 #drop-area input[type="file"] {
