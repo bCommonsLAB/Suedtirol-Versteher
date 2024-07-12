@@ -73,7 +73,6 @@ body,
 }
 header {
   width: 100%;
-  padding: 20px 0;
   background: linear-gradient(90deg, #3d008d, #5f3a8f, #3d008d);
   color: white;
   text-align: center;
@@ -82,46 +81,53 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.466);
   border-radius: 0 0 30px 30px;
   position: fixed;
+  padding: 15px 0;
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 115px;
+  height:7vh;
 }
 
 .seitentitel{
   display: flex;
-  justify-content: center;
-  justify-content: center;
-  height: 100px;
-}
-
-.titel{
-  margin-right: 35px;
-  margin-left: 35px;
+  justify-content: space-around;
 }
 
 .einführung{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.titel{
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .einfuehrungstext {
-  width: 15%;
-  white-space: nowrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 300px;
+  height: 17px;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: #5f3a8f;
+  background-color: #5f3a8f00;
   text-align: center;
-  font-size: small;
+  font-size: 15px;
   font-weight: 100;
-  margin-left: 80px;
-  margin-right: 80px;
+  border: 1px white dashed;
+  border-radius: 10px;
 }
 
 .einfuehrungstext:hover {
-  white-space: normal;
-  background-color: #7b559f; /* Add your desired hover color */
+  height: fit-content;
+  background-color: #7b559f;
 }
+
+
+
+
 
 #audioplayer {
   background-color: #000;
@@ -488,6 +494,16 @@ h2 {
     transform: rotate(359deg);
   }
 }
+@media (max-height: 1280px) {
+  header{
+    height: 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .einfuehrungstext {
+    width: 40%;
+  }
+}
 @media (max-width: 768px) {
   .container {
     width: 80vw;
@@ -523,10 +539,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  header {
-    font-size: 24px;
-    padding: 10px 0;
-  }
+ 
 
   .btn {
     font-size: 12px;
