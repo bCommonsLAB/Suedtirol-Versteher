@@ -90,12 +90,14 @@ header {
 
 .seitentitel{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap:4vw;
 }
 
 .einführung{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap:8vw;
   margin-top: 10px;
 }
 
@@ -124,10 +126,6 @@ header {
   height: fit-content;
   background-color: #7b559f;
 }
-
-
-
-
 
 #audioplayer {
   background-color: #000;
