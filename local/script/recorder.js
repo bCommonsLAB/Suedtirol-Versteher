@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const statusElement = document.getElementById('status');
     const toggleBtn = document.getElementById('micButton');
@@ -24,7 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
         loadingScreen.style.display = 'none';
     }
 
+    function resetAll() {
+        statusElement.innerText = 'Bereit zur Aufnahme';
+        document.getElementById('german-transcription').innerText = '';
+        document.getElementById('italian-transcription').innerText = '';
+        document.getElementById('german-summary').innerText = '';
+        document.getElementById('italian-summary').innerText = '';
+        
+        updateCircle('circle-höflichkeit', 'höflichkeit-prozent', 0);
+        updateCircle('circle-sympathisch', 'sympathisch-prozent', 0);
+        updateCircle('circle-lobend', 'lobend-prozent', 0);
+        updateCircle('circle-wortwahl', 'wortwahl-prozent', 0);
+        
+        const audioPlayer = document.getElementById('audio-player');
+        const uploadedAudio = document.getElementById('uploaded-audio');
+        audioPlayer.src = '';
+        uploadedAudio.style.display = 'none';
+    }
+
     toggleBtn.addEventListener('change', event => {
+        resetAll();
         if (toggleBtn.checked) {
             navigator.mediaDevices.getUserMedia({ audio: true })
                 .then(stream => {
@@ -62,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function handleFiles(files) {
+        resetAll();
         const file = files[0];
         if (file) {
             handleAudioFile(file);

@@ -9,8 +9,6 @@ import threading
 import time
 from langdetect import detect, DetectorFactory
 
-
-
 # Load configuration from config.json
 config_path = Path(__file__).parent / "config.json"
 with open(config_path, 'r') as config_file:
