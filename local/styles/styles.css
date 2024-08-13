@@ -483,6 +483,24 @@ h2 {
   font-family: Arial;
   text-align: center;
 }
+.calltoaction {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calltoact {
+  display: flex; 
+  align-items: center; 
+  background-color: rebeccapurple; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
 
 @keyframes borderLoader {
   from {

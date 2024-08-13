@@ -68,6 +68,9 @@ Dein Server sollte nun laufen und unter `http://localhost:5000` erreichbar sein.
 
 ## Kontakt und Support
 
-Wenn du Fragen oder Probleme hast, zögere nicht, uns zu kontaktieren.
+Wenn du Fragen oder Probleme hast, zögere nicht, uns zu kontaktieren.Für weitere Informationen zu diesem und anderen Projekten schaue hier nach: https://www.bcommonslab.org/
+
+Wenn du die Anwendung ausprobieren möchtest, mache das gerne hier: 
+[Suedtirol Verteher](https://app.bcommonslab.org/suedtirolversteher/)
 
 Viel Erfolg und Spaß mit deinem Südtirol-Versteher-Projekt!
