@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusElement = document.getElementById("status");
   const sendBtn = document.getElementById("sendbutton");
   const centerSprachanalyse = document.getElementById("center");
+  const sprachanalyse = document.getElementById("sprachanalyse");
   const loadingScreen = document.getElementById("loading-screen");
   const germanTranscriptionElement = document.getElementById("german-transcription");
   const germanSummaryElement = document.getElementById("german-summary");
@@ -9,10 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const italianSummaryElement = document.getElementById("italian-summary");
 
   centerSprachanalyse.style.display = "none";
+  sprachanalyse.style.display = "none";
 
   function showCenter() {
     centerSprachanalyse.style.display = "flex";
+    sprachanalyse.style.display = "flex";
+
     animateExpansion(centerSprachanalyse);
+    animateExpansion(sprachanalyse);
   }
 
   function animateExpansion(element) {
