@@ -1,9 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import requests
 import json
 import config
 import os
+from gtts import gTTS
+from io import BytesIO
 
 app = Flask(__name__)
 CORS(app)
@@ -101,6 +103,26 @@ def analyze_text():
     except Exception as e:
         app.logger.error(f'Fehler während der Verarbeitung: {e}')
         return jsonify({'error': 'Fehler während der Verarbeitung'}), 500
+    
+@app.route('/tts', methods=['POST'])
+def tts():
+    data = request.json
+    text = data.get('text')
+    section = data.get('section')  # Kann benutzt werden, um unterschiedliche Abschnitte zu unterscheiden, falls notwendig
+
+    if not text:
+        return {"error": "Text not provided"}, 400
+
+    # Erzeuge eine TTS-Audiodatei
+    tts = gTTS(text, lang='de')
+    audio_file = BytesIO()
+    tts.write_to_fp(audio_file)
+    audio_file.seek(0)
+
+    return send_file(audio_file, mimetype='audio/mpeg', as_attachment=False, download_name='tts.mp3')
+
+
+
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

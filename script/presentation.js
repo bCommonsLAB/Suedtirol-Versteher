@@ -1,6 +1,6 @@
 {
 const fullText1 =
-  "Ich bin dein Südtirol Versteher und du kannst mir etwas diktieren. Ich versuche es auf Deutsch und Italienisch zu transkribieren. Deine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass!";
+  "Ich bin dein Südtirol Versteher und du kannst mir etwas diktieren. Ich versuche es auf Deutsch und Italienisch zu transkribieren. Deine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass! \n\nDisclaimer!\nDer Textkorpus basiert auf dem LLMs von OpenAI - es beinhaltet auch nicht vertrauenswürdige Quellen!";
 const initialText1 =
   "Ich bin dein Südtirol Versteher ...";
 
@@ -41,7 +41,7 @@ textElement1.addEventListener("mouseout", () => {
 }
 {
 const fullText2 =
-  "Sono il tuo conoscitore dell'Alto Adige e puoi dettarmi qualcosa. Cercherò di trascriverlo in tedesco e in italiano. I tuoi dati non verranno memorizzati, ma devono essere inviati a openAI zur Verarbeitung. Formula il tuo testo in modo cortese e simpatico - se funziona, lo vedrai nella valutazione qui sotto. Divertiti!";
+  "Sono il tuo conoscitore dell'Alto Adige e puoi dettarmi qualcosa. Cercherò di trascriverlo in tedesco e in italiano. I tuoi dati non verranno memorizzati, ma devono essere inviati a openAI zur Verarbeitung. Formula il tuo testo in modo cortese e simpatico - se funziona, lo vedrai nella valutazione qui sotto. Divertiti!\n\nDisclaimer!\nIl corpus di testi si basa sugli LLM di OpenAI - include anche fonti non attendibili!";
 const initialText2 =
   "Sono il tuo conoscitore dell'Alto Adige ....";
 
