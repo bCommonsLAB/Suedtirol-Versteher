@@ -70,6 +70,7 @@ body,
   width: 100%;
   height: fit-content;
   margin-top: -50px;
+  margin-bottom: 90px;
 }
 .analyse-wraper{
   display: flex;

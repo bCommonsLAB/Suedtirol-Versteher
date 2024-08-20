@@ -1,6 +1,6 @@
 .cardCommoning  {
     width: 10vh;
-    height: fit-content;
+    height: 180px;
     border-radius: 20px;
     background: #313131;
     align-items: center;
@@ -17,7 +17,6 @@
     flex-direction: column;
    }
 .carddescribt p {
-    
     font-family: "Radio Canada Big", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
