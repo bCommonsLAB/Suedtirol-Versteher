@@ -74,6 +74,7 @@ body,
 .analyse-wraper{
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
   height: 40px;
   width: 100%;
 }
