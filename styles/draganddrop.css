@@ -1,5 +1,3 @@
-/* Existing CSS from your drag-and-drop code */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 .drag-image {
   border: 1px dashed #fff;
@@ -63,15 +61,16 @@
   position: fixed;
   z-index: 1;
   left: 0;
-  top: -25%;
+  left: 0;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
 .popup-content {
-  background-color: #535353b9;
+  background-color: #4d4d4de5;
   padding: 20px;
   border-radius: 10px;
   width: 400px;

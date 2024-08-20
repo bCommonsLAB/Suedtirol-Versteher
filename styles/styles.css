@@ -66,11 +66,15 @@ body,
 .center {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   width: 100%;
+  height: fit-content;
+  margin-top: -50px;
 }
-.mustersprache {
+.analyse-wraper{
   display: flex;
   justify-content: space-evenly;
+  height: 40px;
   width: 100%;
 }
 

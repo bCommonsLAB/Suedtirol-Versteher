@@ -63,4 +63,6 @@
   background: #3f3f3f98;
   padding: 15px 20px;
   font-size: 20px;
+  max-height: 300px;
+  overflow-y: scroll;
 }
