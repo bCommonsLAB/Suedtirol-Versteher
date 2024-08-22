@@ -1,8 +1,8 @@
 {
 const fullText1 =
-  "DISCLAIMER: Deine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass!";
+  "Ich bin dein Südtirol Versteher und du kannst mir etwas schreiben oder zu diktieren. Ich versuche es auf Deutsch und Italienisch zu übersetzen und den Eindruck zu analysieren.\n\nDisclaimer: \nDeine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass!";
 const initialText1 =
-  "DISCLAIMER!";
+  "Ich bin dein Südtirol Versteher ...";
 
 // Referenz zum richtigen Element
 const textElement1 = document.getElementById("text1");
@@ -40,11 +40,10 @@ textElement1.addEventListener("mouseout", () => {
 });
 }
 {
-const fullText2 =
-  "DISCLAIMER: I tuoi dati non vengono salvati, ma vengono mandatia ad OPENAI per essere elaborati. Formula un testo cortese e sympatico - Vedrai se ha funzionato nella valutazione in fondo alla pagina. Buon divertimento!";
+  const fullText2 =
+  "Sono il vostro Capitore Altoatesini e potete scrivermi o dettarmi qualcosa. Cercherò di tradurlo in tedesco e italiano e analizzerò l'impressione.\nDisclaimer: \nI vostri dati non saranno salvati, ma dovranno essere inviati ad openAI per l'elaborazione. Formulate il vostro testo in modo gentile e simpatico - potete vedere se ha funzionato nella valutazione qui sotto. Buon divertimento!";
 const initialText2 =
-  "DISCLAIMER!";
-
+  "Sono il vostro Capitore Altoatesini ...";
 // Referenz zum richtigen Element
 const textElement2 = document.getElementById("text2");
 

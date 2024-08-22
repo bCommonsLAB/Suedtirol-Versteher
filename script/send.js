@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("text", userTextElement.value);
 
-    fetch("http://localhost:5000/analyze-text", {
+    fetch("https://api.bcommonslab.org/suedtirol/analyze-text", {
       method: "POST",
       body: formData,
     })

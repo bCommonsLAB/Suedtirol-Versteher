@@ -31,8 +31,8 @@
 <header>
     <div class="seitentitel"><p class="titel">Suedtirol Versteher</p><p class="titel">Capitore Altoatesini</p></div>
     <div class="einführung">
-        <div class="einfuehrungstext" id="text1">DISCLAIMER</div>
-        <div class="einfuehrungstext" id="text2">DISCLAIMER</div>
+        <div class="einfuehrungstext" id="text1">Ich bin dein</div>
+        <div class="einfuehrungstext" id="text2">Sono il tuo</div>
     </div>
 </header>
 <div class="container">
@@ -40,7 +40,7 @@
         <p id="status" class="status"></p>    
             <div class="send-wraper">
                 <div class="input-mic-wraper">
-                    <textarea name="text" class="input" placeholder="Write Something" id="user-text" ></textarea>
+                    <textarea name="text" class="input" placeholder="Write some Text in this or much more languages: Deutsch, Italiano, English, Español, Français,  中文 (普通话), العربية, Русский, …" id="user-text" ></textarea>
                     <div class="micdrag">
                         <button id="mic-button" class="micbutton"><i class="fa-solid fa-microphone"></i></button>
                         <button id="open-popup" class="micbutton"><i class="fa-solid fa-file"></i></i></button>
@@ -52,7 +52,7 @@
             <div class="result-grid">
                 <div>
                     <div class="resulttop">
-                        <h2>Deutsche Übersetzung</h2>
+                        <h2>Übersetzung Deutsch</h2>
                         <div class="select">
                             <div class="selected">
                               <span>Select</span>
@@ -104,7 +104,7 @@
     
                 <div>
                     <div class="resulttop">
-                        <h2>Zusammenfassung</h2>
+                        <h2>Wirkung deines Textes</h2>
                         <div class="select">
                             <div class="selected">
                               <span>Select</span>
@@ -162,41 +162,46 @@
                     <h2>Textanalyse</h2>
                 </div>
             </div>
+            <div>
             <div class="analyse-wraper">
-                <div class="cardCommoning" title="Dieser Wert sollte die Höflichkeit die Sie angewendet habe ausdrücken, wobei 0 sehr unhöflichkeit ist und 100 sehr höflichkeit ist.">
-                    <div class="circlewraper">
-                    <div class="pie animate no-round hover-text" id="circle-höflichkeit" style="--c:rgb(173, 216, 230); --secondary-color: rgb(113, 112, 114);">
-                        <div class="prozent" id="höflichkeit-prozent"></div>
-                    </div> </div>
-                    <div class="carddescribt">
-                        <p>Höflichkeit / Cortesia</p>
+                <div class="circle-group-wraper">
+                    <div class="cardCommoning" title="Dieser Wert sollte die Höflichkeit die Sie angewendet habe ausdrücken, wobei 0 sehr unhöflichkeit ist und 100 sehr höflichkeit ist.">
+                        <div class="circlewraper">
+                        <div class="pie animate no-round hover-text" id="circle-höflichkeit" style="--c:rgb(173, 216, 230); --secondary-color: rgb(113, 112, 114);">
+                            <div class="prozent" id="höflichkeit-prozent"></div>
+                        </div> </div>
+                        <div class="carddescribt">
+                            <p>Höflichkeit / Cortesia</p>
+                        </div>
+                    </div>
+                    <div class="cardCommoning" title="Dieser Wert sollte ihr Sympathisches Verhalten ausdrücken, wobei 0 sehr unsympathisch ist und 100 sehr sympathisch ist.">
+                        <div class="circlewraper">
+                        <div class="pie animate no-round hover-text" id="circle-sympathisch" style="--c:rgb(178, 224, 164); --secondary-color: rgb(113, 112, 114);">
+                            <div class="prozent" id="sympathisch-prozent"></div>
+                        </div></div>
+                        <div class="carddescribt">
+                            <p>Sympathisch / Amichevole</p>
+                        </div>
                     </div>
                 </div>
-                <div class="cardCommoning" title="Dieser Wert sollte ihr Sympathisches Verhalten ausdrücken, wobei 0 sehr unsympathisch ist und 100 sehr sympathisch ist.">
-                    <div class="circlewraper">
-                    <div class="pie animate no-round hover-text" id="circle-sympathisch" style="--c:rgb(178, 224, 164); --secondary-color: rgb(113, 112, 114);">
-                        <div class="prozent" id="sympathisch-prozent"></div>
-                    </div></div>
-                    <div class="carddescribt">
-                        <p>Sympathisch / Amichevole</p>
+                <div class="circle-group-wraper">
+                    <div class="cardCommoning" title="Dieser Wert sollte ausdrücken, wie Lobend der Text ist, wobei 0 sehr beleidigend ist und 100 sehr lobend ist.">
+                        <div class="circlewraper">
+                        <div class="pie animate no-round hover-text" id="circle-lobend" style="--c:rgb(250, 214, 165); --secondary-color: rgb(113, 112, 114);">
+                            <div class="prozent" id="lobend-prozent"></div>
+                        </div></div>
+                        <div class="carddescribt">
+                            <p>Lobend / <br>Lodare</p>
+                        </div>
                     </div>
-                </div>
-                <div class="cardCommoning" title="Dieser Wert sollte ausdrücken, wie Lobend der Text ist, wobei 0 sehr beleidigend ist und 100 sehr lobend ist.">
-                    <div class="circlewraper">
-                    <div class="pie animate no-round hover-text" id="circle-lobend" style="--c:rgb(250, 214, 165); --secondary-color: rgb(113, 112, 114);">
-                        <div class="prozent" id="lobend-prozent"></div>
-                    </div></div>
-                    <div class="carddescribt">
-                        <p>Lobend / <br>Lodare</p>
-                    </div>
-                </div>
-                <div class="cardCommoning" title="Dieser Wert sollte ausdrücken, wie gut die eigene Wortwahl, wobei 0 zu wünschen übrig lässt und 100 sehr eloquent ist.">
-                    <div class="circlewraper">
-                    <div class="pie animate no-round hover-text" id="circle-wortwahl" style="--c:rgb(230, 230, 250); --secondary-color: rgb(113, 112, 114);">
-                        <div class="prozent" id="wortwahl-prozent"></div>
-                    </div></div>
-                    <div class="carddescribt">
-                        <p>Wortwahl / Scelta delle parole</p>
+                    <div class="cardCommoning" title="Dieser Wert sollte ausdrücken, wie gut die eigene Wortwahl, wobei 0 zu wünschen übrig lässt und 100 sehr eloquent ist.">
+                        <div class="circlewraper">
+                        <div class="pie animate no-round hover-text" id="circle-wortwahl" style="--c:rgb(230, 230, 250); --secondary-color: rgb(113, 112, 114);">
+                            <div class="prozent" id="wortwahl-prozent"></div>
+                        </div></div>
+                        <div class="carddescribt">
+                            <p>Wortwahl / Scelta delle parole</p>
+                        </div>
                     </div>
                 </div>
             </div>

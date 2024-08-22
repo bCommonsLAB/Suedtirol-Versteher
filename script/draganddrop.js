@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("audio", file);
 
-    fetch("http://localhost:5000/transcribe", {
+    fetch("https://api.bcommoslab.org/suedtirol/transcribe", {
       method: "POST",
       body: formData,
     })

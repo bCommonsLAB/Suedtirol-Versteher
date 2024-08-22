@@ -42,13 +42,4 @@
     margin-top: 10px;
   }
 
-  /* Anpassung der unteren Kreise */
-  .center {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pie {
-    margin: 10px 0;
-  }
 }

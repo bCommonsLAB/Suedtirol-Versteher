@@ -1,6 +1,7 @@
 .cardCommoning  {
-    width: 10vh;
+    width: 125px;
     height: 180px;
+    margin: 0px 5px 50px 5px;
     border-radius: 20px;
     background: #313131;
     align-items: center;
@@ -22,4 +23,6 @@
     font-style: normal;
     color: rgb(255, 255, 255);
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
