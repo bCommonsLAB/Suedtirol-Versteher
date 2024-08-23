@@ -1,5 +1,6 @@
 config = {
     "myopenkey": "YOUR_API_KEY",
+    "port": 5000,
     "modelname": "gpt-4o",
      "jsonbuild": """
           Analysiere den folgenden Text auf Deutsch und gib die Ergebnisse in einem strukturierten Json Format zurück ohne einen markdown viewer. Das Ergebnis sollte die folgenden Komponenten enthalten:
@@ -15,5 +16,4 @@ config = {
 
             Hier ist der transkribierte Text:
           """
-        
 }

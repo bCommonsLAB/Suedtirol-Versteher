@@ -75,7 +75,7 @@ def analyze_text():
             json={
                 'model': config.config['modelname'],
                 'messages': [
-                    {"role": "system", "content": "Du bist ein Wissenschaftler, der sich im Bereich Commoning auskennt."},
+                    {"role": "system", "content": "Du bist ein Sprachwissenschaftler, der sich mit verständnisvoller Kommunikation besonders gut auskennt."},
                     {"role": "user", "content": prompt}
                 ]
             }
@@ -122,7 +122,5 @@ def tts():
     return send_file(audio_file, mimetype='audio/mpeg', as_attachment=False, download_name='tts.mp3')
 
 
-
-
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=config.config['port'], debug=True)

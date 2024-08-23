@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("text", userTextElement.value);
 
-    fetch("https://api.bcommonslab.org/suedtirol/analyze-text", {
+    fetch(reverseProxiUrl  + "analyze-text", {
       method: "POST",
       body: formData,
     })
