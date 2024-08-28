@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("audio", audioBlob);
 
-    fetch(reverseProxiUrl  + "transcribe", {
+    fetch("https://api.bcommonslab.org/suedtirol/transcribe", {
       method: "POST",
       body: formData,
     })

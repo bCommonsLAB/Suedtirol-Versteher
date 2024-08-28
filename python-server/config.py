@@ -1,7 +1,7 @@
 config = {
     "myopenkey": "YOUR_API_KEY",
     "port": 5000,
-    "modelname": "gpt-4o",
+    "modelname": "gpt-3.5-turbo",
      "jsonbuild": """
           Analysiere den folgenden Text auf Deutsch und gib die Ergebnisse in einem strukturierten Json Format zurück ohne einen markdown viewer. Das Ergebnis sollte die folgenden Komponenten enthalten:
 
