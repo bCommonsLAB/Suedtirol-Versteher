@@ -108,13 +108,14 @@ def analyze_text():
 def tts():
     data = request.json
     text = data.get('text')
+    lang = data.get('lang')
     section = data.get('section')  # Kann benutzt werden, um unterschiedliche Abschnitte zu unterscheiden, falls notwendig
 
     if not text:
         return {"error": "Text not provided"}, 400
 
     # Erzeuge eine TTS-Audiodatei
-    tts = gTTS(text, lang='de')
+    tts = gTTS(text, lang=lang)
     audio_file = BytesIO()
     tts.write_to_fp(audio_file)
     audio_file.seek(0)

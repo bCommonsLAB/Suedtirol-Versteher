@@ -1,6 +1,6 @@
 {
 const fullText1 =
-  "Ich bin dein Südtirol Versteher und du kannst mir etwas schreiben oder zu diktieren. Ich versuche es auf Deutsch und Italienisch zu übersetzen und den Eindruck zu analysieren.\n\nDisclaimer: \nDeine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass!";
+  "Ich bin dein Südtirol Versteher und du kannst mir etwas schreiben oder zu diktieren. Ich versuche es auf Deutsch und Italienisch zu übersetzen und den Eindruck zu analysieren. Formuliere deinen Text höflich und sympathisch - ob es geklappt hat, siehst du unten in der Bewertung. Viel Spass!\n\nDisclaimer: \nDeine Daten werden nicht gespeichert, müssen aber an openAI zur Verarbeitung gesendet werden.";
 const initialText1 =
   "Ich bin dein Südtirol Versteher ...";
 
@@ -41,9 +41,9 @@ textElement1.addEventListener("mouseout", () => {
 }
 {
   const fullText2 =
-  "Sono il vostro Capitore Altoatesini e potete scrivermi o dettarmi qualcosa. Cercherò di tradurlo in tedesco e italiano e analizzerò l'impressione.\nDisclaimer: \nI vostri dati non saranno salvati, ma dovranno essere inviati ad openAI per l'elaborazione. Formulate il vostro testo in modo gentile e simpatico - potete vedere se ha funzionato nella valutazione qui sotto. Buon divertimento!";
+  "Sono il vostro Capitore Altoatesino e potete scrivermi o dettarmi qualcosa. Cercherò di tradurlo in tedesco e italiano e analizzerò l'impressione. Formulate il vostro testo in modo gentile e simpatico - potete vedere se ha funzionato nella valutazione qui sotto. Buon divertimento!\n\nDisclaimer: \nI vostri dati non saranno salvati, ma dovranno essere inviati ad openAI per l'elaborazione.";
 const initialText2 =
-  "Sono il vostro Capitore Altoatesini ...";
+  "Sono il vostro Capitore Altoatesino ...";
 // Referenz zum richtigen Element
 const textElement2 = document.getElementById("text2");
 

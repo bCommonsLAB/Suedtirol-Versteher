@@ -1,4 +1,4 @@
-function text2Speech(elementId, section) {
+function text2Speech(elementId, lang) {
   var text = document.getElementById(elementId).innerText;
 
   fetch(reverseProxiUrl  + "tts", {
@@ -6,7 +6,7 @@ function text2Speech(elementId, section) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ text: text, section: section }),
+    body: JSON.stringify({ text: text, section: "", lang: lang }),
   })
     .then((response) => response.blob())
     .then((blob) => {
