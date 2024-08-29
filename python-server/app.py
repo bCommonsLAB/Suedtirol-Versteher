@@ -36,7 +36,7 @@ def transcribe():
                 'https://api.openai.com/v1/audio/transcriptions',
                 headers=headers,
                 files=files,
-                data={'model': 'whisper-1', 'language': 'de'}
+                data={'model': 'whisper-1'}
             )
         
         if response.status_code == 200:
