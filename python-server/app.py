@@ -12,6 +12,8 @@ CORS(app)
 
 # API-Schlüssel für OpenAI festlegen
 api_key = config.config['myopenkey']
+portNum = config.config['port']
+
 
 @app.route('/suedtirol/transcribe', methods=['POST'])
 def transcribe():
@@ -124,4 +126,4 @@ def tts():
 
 
 if __name__ == '__main__':
-    app.run(port=config.config['port'], debug=True)
+    app.run(port=portNum, debug=True)
